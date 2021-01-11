@@ -1,0 +1,17 @@
+Distribuição: Debian 9
+
+Quantidade de memória: 1024 MB
+
+Configuração de rede no VirtualBox:
+
+Adaptador 1: NAT
+Adaptador 2: host-only (172.16.100.1)
+
+Arquivos:
+
+/etc/hosts
+/etc/hostname
+/etc/network/interfaces
+/etc/sudoers.d/98_4linux
+/opt/web_backup_system.sh
+/opt/backup_logs.sh

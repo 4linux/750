@@ -1,0 +1,66 @@
+Distribuição: CentOS 7
+
+Quantidade de memória: 2014 MB
+
+Configuração de rede no VirtualBox:
+
+Adaptador 1: NAT
+Adaptador 2: host-only (172.16.100.1)
+
+Arquivos:
+
+/etc/hosts
+/etc/hostname
+/etc/sysconfig/network-scripts/ifcfg-enp0s3
+/etc/sysconfig/network-scripts/ifcfg-enp0s8
+/etc/sudoers.d/98_4linux
+/opt/vagrant_2.2.9_x86_64.rpm
+/opt/inspec-2.2.70-1.el7.x86_64.rpm
+/opt/snoopy-install.sh -> permissão 755
+/opt/Dockerfile
+/home/suporte/Vagrantfile
+/usr/sbin/lab01 -> permissão 755
+/usr/sbin/lab02 -> permissão 755
+/usr/sbin/lab03 -> permissão 755
+/usr/sbin/lab04 -> permissão 755
+/usr/sbin/lab05 -> permissão 755
+/usr/sbin/lab06 -> permissão 755
+/usr/sbin/lab07 -> permissão 755
+/usr/sbin/lab08 -> permissão 755
+/usr/sbin/lab09 -> permissão 755
+/usr/sbin/lab10 -> permissão 755
+/usr/sbin/lab11 -> permissão 755
+/usr/sbin/lab12 -> permissão 755
+/usr/sbin/limpar-lab -> permissão 755
+
+/etc/sysconfig/selinux
+
+Deixar o Firewalld desativado
+
+sudo systemctl disable firewalld
+
+Pastas:
+
+/opt/pacotes
+
+* Instalar o Vagrant usando o arquivo /opt/vagrant_2.2.9_x86_64.rpm
+
+* Instalar o Inspec usando o arquivo /opt/inspec-2.2.70-1.el7.x86_64.rpm
+
+* Instalar o Snoopy usando o arquivo /opt/snoopy-install.sh                                                                                                   
+
+* Instalar o Docker seguindo a Documentação:
+
+https://docs.docker.com/engine/install/centos
+
+* Gerar a image docker ubuntu-ssh usando o arquivo /opt/Dockerfile
+
+sudo docker image build -t ubuntu-ssh /opt
+
+* Criar a rede dexterlan no Docker
+
+sudo docker network create --driver bridge --subnet 172.18.0.0/16 dexterlan
+
+Discos:
+
+Adicionar + 2 discos de 20GB

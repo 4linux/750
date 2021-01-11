@@ -1,0 +1,39 @@
+Distribuição: CentOS 7
+
+Quantidade de memória: 512 MB
+
+Configuração de rede no VirtualBox:
+
+Adaptador 1: NAT
+Adaptador 2: host-only (172.16.100.1)
+
+Arquivos:
+
+/etc/hosts
+/etc/hostname
+/etc/sysconfig/network-scripts/ifcfg-enp0s3
+/etc/sysconfig/network-scripts/ifcfg-enp0s8
+/etc/sudoers.d/98_4linux
+/opt/add-to-groups.sh
+/opt/add-users.sh
+/opt/backup_logs.sh
+/opt/case-script.sh
+/opt/copy-umask.sh
+/opt/for-script.sh
+/opt/function-script.sh
+/opt/if-script.sh
+/opt/web_backup_system.sh
+/opt/while-test.sh
+/etc/sysconfig/selinux
+
+Deixar o Firewalld desativado
+
+sudo systemctl disable firewalld
+
+
+Pastas:
+
+/opt/pacotes
+
+
+

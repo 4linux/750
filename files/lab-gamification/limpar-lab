@@ -1,0 +1,5 @@
+#!/bin/bash
+echo " " > /var/log/secure
+echo 3 > /proc/sys/vm/drop_caches
+echo ' '
+echo 'Você pode começar a executar o seu Lab Gamification'

@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+  config.ssh.username = "root"
+  config.ssh.password = "4linux"
+  config.ssh.port = "2222"
+  config.vm.hostname = "docker-ssh"
+  config.vm.provider "docker" do |d|
+    d.image = "ubuntu-ssh"
+    d.remains_running = false
+    d.has_ssh = true
+  end
+end

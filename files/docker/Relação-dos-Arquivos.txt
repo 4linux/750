@@ -1,0 +1,35 @@
+Distribuição: Ubuntu Server 16 (Xenial)
+
+Quantidade de memória: 1024 MB
+
+Configuração de rede no VirtualBox:
+
+Adaptador 1: NAT
+Adaptador 2: host-only (172.16.100.1)
+
+Arquivos:
+
+/etc/hosts
+/etc/hostname
+/etc/network/interfaces
+/etc/sudoers.d/98_4linux
+/opt/vagrant_2.2.9_x86_64.deb
+/opt/Dockerfile
+
+Pastas:
+
+/opt/4450
+
+* Instalar o Vagrant usando o arquivo /opt/vagrant_2.2.9_x86_64.deb
+
+* Instalar o Docker seguindo a Documentação:
+
+https://docs.docker.com/engine/install/ubuntu/
+
+* Gerar a image docker ubuntu-ssh usando o arquivo /opt/Dockerfile
+
+sudo docker image build -t ubuntu-ssh /opt
+
+* Criar a rede dexterlan no Docker
+
+sudo docker network create --driver bridge --subnet 172.18.0.0/16 dexterlan

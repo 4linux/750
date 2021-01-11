@@ -1,0 +1,21 @@
+Distribuição: CentOS 7
+
+Quantidade de memória: 512 MB
+
+Configuração de rede no VirtualBox:
+
+Adaptador 1: NAT
+Adaptador 2: host-only (172.16.100.1)
+
+Arquivos:
+
+/etc/hosts
+/etc/hostname
+/etc/sudoers.d/98_4linux
+/etc/sysconfig/network-scripts/ifcfg-enp0s3
+/etc/sysconfig/network-scripts/ifcfg-enp0s8
+/etc/sysconfig/selinux
+
+Deixar o Firewalld desativado
+
+sudo systemctl disable firewalld

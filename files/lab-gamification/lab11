@@ -1,0 +1,171 @@
+#!/bin/bash
+
+clear
+
+export START=$(date +%Y-%m-%d\ %H:%M:%S)
+
+echo "########## QUESTÃO 01 ##########"
+echo "Empacotar e compactar o diretório /etc no arquivo /tmp/bkp_etc.tar.gz"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.1.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO01=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.1.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO01 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA01='1';
+   else
+   export NOTA01='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 02 ##########"
+echo "Empacotar e compactar o diretório /home no arquivo /tmp/bkp_home.tar.bz2"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.2.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO02=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.2.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO02 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA02='1';
+   else
+   export NOTA02='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 03 ##########"
+echo "Listar os arquivos que estão armazenados no arquivo /tmp/bkp_etc.tar.gz"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.3.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO03=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.3.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO03 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA03='1';
+   else
+   export NOTA03='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 04 ##########"
+echo "Compactar o arquivo /etc/passwd no arquivo /tmp/passwd.gz"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.4.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO04=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.4.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO04 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA04='1';
+   else
+   export NOTA04='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 05 ##########"
+echo "Bloquear o usuário suporte para que o mesmo não possa criar agendamento único"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.5.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO05=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.5.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO05 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA05='1';
+   else
+   export NOTA05='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 06 ##########"
+echo "Listar os agendamentos periódicos do usuário vagrant"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.6.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO06=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.6.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO06 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA06='1';
+   else
+   export NOTA06='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 07 ##########"
+echo "Criar agendamento no arquivo /etc/crontab para listar o diretório /etc a cada 30 minutos com o root"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.7.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO07=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.7.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO07 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA07='1';
+   else
+   export NOTA07='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 08 ##########"
+echo "Criar o banco de dados de nome backup no MSYQL (Use os comandos SQL em letras maiúsculas)"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.8.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO08=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.8.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO08 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA08='1';
+   else
+   export NOTA08='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 09 ##########"
+echo "Listar o banco de dados no MSYQL (Use os comandos SQL em letras maiúsculas)"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.9.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO09=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.9.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO09 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA09='1';
+   else
+   export NOTA09='0';
+fi
+echo " "
+
+echo "########## QUESTÃO 10 ##########"
+echo "Listar os registros da tabela user no banco mysql (Use os comandos SQL em letras maiúsculas)"
+inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.10.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}'
+
+export RESULTADO10=$(inspec exec https://raw.githubusercontent.com/instrutordocker/labs/master/lab12.10.tar.gz | tail -1 | awk -F" " '{ print $3,$4,$5,$6}')
+echo $RESULTADO10 | grep '1 successful' > /dev/null
+  if [ $? -eq 0 ]; then
+   export NOTA10='1';
+   else
+   export NOTA10='0';
+fi
+echo " "
+
+export FINAL=$(expr $NOTA01 + $NOTA02 + $NOTA03 + $NOTA04 + $NOTA05 + $NOTA06 + $NOTA07 + $NOTA08 + $NOTA09 + $NOTA10)
+
+export END=$(date +%Y-%m-%d\ %H:%M:%S )
+
+while true
+do
+echo "Você gostaria de enviar sua nota para o banco de dados da Dexter?"
+read OPT
+echo " "
+
+case $OPT in
+sim)
+mysql -u suporte -p4linux -D labgamification 1> /dev/null 2> /dev/null << TERMINAR
+INSERT INTO labs (id,inicio,fim,aula,nota) VALUES ('12','$START','$END','Aula 12','$FINAL');
+TERMINAR
+  if [ $? -ne 0 ]; then
+echo "A sua nota já esta registrada no banco de dados da Dexter"
+echo " "
+echo "Acesse no Browser o endereço 172.16.100.110 para visualizar suas notas"
+exit
+else
+echo "Acesse no Browser o endereço 172.16.100.110 para visualizar suas notas"
+exit
+fi
+;;
+nao)
+echo " "
+echo -n "Sua nota final para este Lab Gamification é igual a" ; echo -n " " ; echo $FINAL
+exit
+;;
+*) echo "Escolha uma opção válida: sim|nao" 
+echo " "
+;;
+esac
+done
